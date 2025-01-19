@@ -14,17 +14,19 @@ function calculateThreadlibSpecs() {
 	H = 0.595875 * P;
 	R = 0.107 * P;
 
+	Epsilon = 0.001;
+
 	DSupportExt = PitchDiam - H - R/2;
 	RrotExt = DSupportExt / 2;
-	drRootExt = -0.0001;
-	dzRootExt = cos(40*Pi/180) * H*1.1;
+	drRootExt = -Epsilon;
+	dzRootExt = cos(40*Pi/180) * H*1.09;
 	drCrestExt = H*.9;
 	dzCrestExt = cos(40*Pi/180) * H*.1;
 
 	DSupportInt = MinorDiam + H*.9*2 + R/2;
 	RrotInt = -DSupportInt / 2;
-	drRootInt = 0;
-	dzRootInt = cos(40*Pi/180)*H*1.1;
+	drRootInt = -Epsilon;
+	dzRootInt = cos(40*Pi/180)*H*1.09;
 	drCrestInt = H*.9;
 	dzCrestInt = H*.1;
 }
